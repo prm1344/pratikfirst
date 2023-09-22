@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Moving Image Example</title>
+    <style>
+        /* Style the container to control its dimensions */
+        .container {
+            position: relative;
+            width: 400px;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        /* Style the image to give it initial properties */
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            transition: transform 2s linear;
+        }
+
+        /* Apply animation when the 'move' class is added */
+        .move {
+            transform: translate(200px, 200px);
+        }
+    </style>
+</head>
+<body>
+    <h1>Moving Image Example</h1>
+    <div class="container">
+        <img id="movingImage" src="E:\Project_move\india.jpg" alt="Moving Image">
+    </div>
+
+    <button onclick="moveImage()">Move Image</button>
+
+    <script>
+        function moveImage() {
+            var image = document.getElementById("movingImage");
+            image.classList.toggle("move");
+        }
+    </script>
+</body>
+</html>
